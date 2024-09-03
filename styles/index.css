@@ -177,7 +177,7 @@ body:has(.side-menu:checked) {
 
 .banner 
 {
-    background-image: url("/Users/macbook/Desktop/laspi-site/static/banner1.jpg");
+    background-image: url("static/banner1.jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-repeat: no-repeat;
