@@ -148,6 +148,7 @@ body:has(.side-menu:checked) {
         justify-content: space-between;
         text-align: center;
         background-color: white;
+        z-index: 2;
     }
 
    
@@ -248,11 +249,79 @@ body:has(.side-menu:checked) {
 
 .areas img
 {
-    width: 50%;
+    width: auto;
+    height: 180px;
     
 }
+
 
 .areas div
 {
    text-align: center;
+}
+
+.areas div > div:nth-of-type(1)
+{ 
+    font-weight: 600;
+    margin: 5% 0 5% 0;
+    font-size: 22px;
+    
+}
+
+.card-pd > div:nth-of-type(1)
+{
+    margin: 0px;
+
+}
+
+.sponsors
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponsors-row-1, .sponsors-row-2
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 7%;
+}
+
+.sponsors-row-2
+{
+    gap: 8%;
+    margin: auto 0;
+}
+
+.sponsors img
+{
+    width: 15%;
+    filter: grayscale(100%);
+}
+
+.contato-footer
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+}
+
+.contato
+{
+   background-color: #006396;
+   width: 40%;
+   display: flex;
+}
+
+.map
+{
+    right: 0;
+    width: 57.78%;
+    height: 100%;
+   
 }
