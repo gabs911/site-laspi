@@ -160,11 +160,33 @@ body:has(.side-menu:checked) {
     .menu li{
         float: left;
     }
+
     .menu a:hover{
         background-color: white;
-        color: var(--gray);
-
+        color: rgb(0, 99, 150);
+        
     }
+
+    .cool-link {
+        display: inline-block;
+        color: rgb(0, 99, 150);
+        text-decoration: none;
+    }
+    
+    .cool-link::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 8px;
+        background: rgb(0, 99, 150);
+        transition: width .3s;
+    }
+    
+    .cool-link:hover::after {
+        width: 100%;
+        transition: width .3s;
+    }
+
 
     .hamb{
         display: none;
@@ -509,7 +531,7 @@ body:has(.side-menu:checked) {
     display: inline-block;
     background-color: white;
     width: 0.25rem;
-    height: 1rem;
+    height: 1.3rem;
 
     animation: blink 1s infinite;
 }
