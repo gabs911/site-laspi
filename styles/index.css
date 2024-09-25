@@ -59,6 +59,7 @@ ul
     overflow: hidden;
     font-weight: bold;
     font-size: 20px;
+    z-index: 1000;
 
 }
 

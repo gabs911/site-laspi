@@ -1,16 +1,10 @@
-const track = document.querySelector(".carousel__track");
-const prev = document.querySelector(".carousel__nav-prev");
-const next = document.querySelector(".carousel__nav-next");
-let carouselWidth = document.querySelector(".carousel__wrapper").offsetWidth;
-let cardWidth = document.querySelector(".card__wrapper").offsetWidth;
-let cardLength = document.querySelectorAll(".card__wrapper").length;
-const indicatorParent = document.querySelector(".carousel__nav ul");
+const track1 = document.querySelector(".carousel__track1");
+const prev1 = document.querySelector(".carousel__nav-prev1");
+const next1 = document.querySelector(".carousel__nav-next1");
 
-let direction;
-let itemToScroll;
-let sectionIndex = 0;
-let infinite = false;
-let dots;
+const indicatorParent1 = document.querySelector(".carousel__nav1 ul");
+
+
 
 if (screen.width > 999) {
   itemToScroll = 1;
@@ -59,45 +53,45 @@ window.addEventListener("resize", () => {
 */
 
 
-next.addEventListener("click", () => {
+next1.addEventListener("click", () => {
   direction = -1;
   infinite = true;
   if (direction === 1) {
     for (i = 0; i < 5; i++) {
-      track.prepend(track.lastElementChild);
+      track1.prepend(track1.lastElementChild);
     }
   }
 
-  track.style.transform = `translateX(-${carouselWidth-1225}px)`;
+  track1.style.transform = `translateX(-${carouselWidth-1225}px)`;
 });
 
-prev.addEventListener("click", () => {
+prev1.addEventListener("click", () => {
   direction = 1;
   infinite = true;
   if (direction === -1 || direction === undefined) {
     for (i = 0; i < 5; i++) {
-      track.appendChild(track.firstElementChild);
+      track1.appendChild(track1.firstElementChild);
     }
   }
-  track.style.transform = `translateX(${carouselWidth-1225}px)`;
+  track1.style.transform = `translateX(${carouselWidth-1225}px)`;
 
   console.log("aa");
 });
 
-track.addEventListener("transitionend", function () {
+track1.addEventListener("transitionend", function () {
   if (infinite === true) {
-    track.style.transition = `none`;
-    track.style.transform = `translate(0)`;
+    track1.style.transition = `none`;
+    track1.style.transform = `translate(0)`;
     setTimeout(function () {
-      track.style.transition = `transform .5s`;
+      track1.style.transition = `transform .5s`;
     });
     if (direction === -1 || direction === "undefined") {
       for (i = 0; i < itemToScroll; i++) {
-        track.appendChild(track.firstElementChild);
+        track1.appendChild(track1.firstElementChild);
       }
     } else if (direction === 1) {
       for (i = 0; i < itemToScroll; i++) {
-        track.prepend(track.lastElementChild);
+        track1.prepend(track1.lastElementChild);
       }
     }
   }
