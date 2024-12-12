@@ -339,8 +339,8 @@ section p
   color: #fff;
 }
 .carousel__nav button, .carousel__nav1 button, .carousel__nav2 button {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid #fff;
   position: absolute;
@@ -352,10 +352,10 @@ section p
 }
 
 .carousel__nav-prev, .carousel__nav-prev1, .carousel__nav-prev2 {
-  left: -30px;
+  left: -20px;
 }
 .carousel__nav-next, .carousel__nav-next1, .carousel__nav-next2 {
-  right: -30px;
+  right: -20px;
 }
 .card__content > * {
   flex: 1;
@@ -548,7 +548,7 @@ section p
 
 @media all and (max-width: 600px) {
   .carousel__wrapper {
-    width: 74%;
+    width: 100%;
   }
   .card__wrapper {
     width: 400px;
@@ -557,7 +557,7 @@ section p
 
 @media all and (max-width: 768px) {
   .carousel__wrapper {
-    width: 76%;
+    width:100%;
   }
   .card__wrapper {
     width: 259px;

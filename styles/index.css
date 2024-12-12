@@ -308,6 +308,16 @@ body:has(.side-menu:checked) {
     
 }
 
+.mosaico
+{
+    width: 100%;
+}
+
+.mosaico img
+{
+    width: 100%;
+}
+
 
 @media (max-width: 1081px) {
     .areas 

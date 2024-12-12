@@ -60,6 +60,7 @@ window.addEventListener("resize", () => {
 
 
 next.addEventListener("click", () => {
+  console.log("click");
   direction = -1;
   infinite = true;
   if (direction === 1) {
@@ -72,6 +73,7 @@ next.addEventListener("click", () => {
 });
 
 prev.addEventListener("click", () => {
+  //console.log("click");
   direction = 1;
   infinite = true;
   if (direction === -1 || direction === undefined) {
@@ -81,7 +83,7 @@ prev.addEventListener("click", () => {
   }
   track.style.transform = `translateX(${carouselWidth-1225}px)`;
 
-  console.log("aa");
+  
 });
 
 track.addEventListener("transitionend", function () {
