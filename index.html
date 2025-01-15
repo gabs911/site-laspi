@@ -17,6 +17,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <meta property="creator.productor"
       content="http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/NUMERO">
+      
+      <script>
+        var on = true
+        function hideCursor() { 
+          console.log(on);
+          if(on == true) {document.getElementById('cursor').style.display = "none"; on = false;}
+          else {document.getElementById('cursor').style.display = "inline-block";on=true;} 
+        }
+      </script>
     </head>
     <body>
         <!--BARRA DO GOVERNO FEDERAL--> 
@@ -34,7 +43,7 @@
           <!-- Logo -->
           <a href="#" class="logo"><img id="logo-icon" src="static/logolaspi1@2x.png" alt=""></a>
           <!-- Hamburger icon -->
-          <input class="side-menu" type="checkbox" id="side-menu"/>
+          <input onclick= "hideCursor()" class="side-menu" type="checkbox" id="side-menu"/>
           <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
           <!-- Menu -->
           <nav class="nav">
@@ -53,7 +62,7 @@
         <div class="banner">
           <div class="texto">
             <div class="legenda-titulo">CONHEÇA O LASPI</div>
-            <div class="legenda-texto">LABORATÓRIO DA UFRJ ESPECIALIZADO EM SEGURANÇA DE SOFTWARE<div class="cursor"></div></div>
+            <div class="legenda-texto">LABORATÓRIO DA UFRJ ESPECIALIZADO EM SEGURANÇA DE SOFTWARE<div id="cursor"></div></div>
             <a href="#atuacoes"><div class="button-saiba-mais"> SAIBA MAIS SOBRE NÓS</div></a>
           </div>
         </div>
@@ -100,17 +109,16 @@
        
         <div class="sponsors">
           <div class="sponsors-row-1">
-            <img src="static/ufrj.svg" alt="">
-            
-            <img src="static/iti.svg" alt="">
-            <img style="width: 20%;" src="static/Marca_Principal_P_B.svg" alt="">
+            <a href="https://ufrj.br/"><img src="static/ufrj.svg" alt=""></a>
+            <a href="https://www.gov.br/iti/pt-br"><img  src="static/iti.svg" alt=""></a>
+            <a href="https://poli.ufrj.br/"><img   src="static/Marca_Principal_P_B.svg" alt=""></a>
           </div>
           <div class="sponsors-row-2">
-            <img src="static/capes.svg" alt="">
-            <img src="static/cnpq.svg" alt="">
-            <img src="static/faperj.svg" alt="">
-            <img style="width: 10%;" src="static/marca-rgb-2023-1@2x.png" alt="">
-            <img style="width: 10%;" src="static/logo-coppetec.jpg" alt="">
+            <a href="https://www.gov.br/capes/pt-br"><img src="static/capes.svg" alt=""></a>
+            <a href="https://www.gov.br/cnpq/pt-br"><img src="static/cnpq.svg" alt=""></a>
+            <a href="https://www.faperj.br/"><img src="static/faperj.svg" alt=""></a>
+            <a href="http://www.finep.gov.br/"><img  src="static/marca-rgb-2023-1@2x.png" alt=""></a>
+            <a href="https://www.coppetec.coppe.ufrj.br/"><img  src="static/logo-coppetec.jpg" alt=""></a>
           </div>
         </div>
 

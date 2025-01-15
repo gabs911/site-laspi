@@ -30,6 +30,7 @@ a
     font-weight: bold;
 }
 
+
 ul
 {
     list-style: none;
@@ -136,6 +137,8 @@ body:has(.side-menu:checked) {
 
 /* Responsiveness */
 @media (min-width: 1390px) {
+
+
     .nav{
         max-height: none;
         top:0;
@@ -172,6 +175,7 @@ body:has(.side-menu:checked) {
         display: inline-block;
         color: rgb(0, 99, 150);
         text-decoration: none;
+        z-index: 2;
     }
     
     .cool-link::after {
@@ -181,6 +185,7 @@ body:has(.side-menu:checked) {
         height: 8px;
         background: rgb(0, 99, 150);
         transition: width .3s;
+        z-index: 2;
     }
     
     .cool-link:hover::after {
@@ -320,6 +325,9 @@ body:has(.side-menu:checked) {
 
 
 @media (max-width: 1081px) {
+
+   
+
     .areas 
     {
       flex-direction: column;
@@ -416,6 +424,7 @@ body:has(.side-menu:checked) {
         
     }
 
+   
     .dados
     {
         width: 50%;
@@ -430,8 +439,6 @@ body:has(.side-menu:checked) {
     }
 
     
-  
-   
 
   }
 
@@ -444,31 +451,51 @@ body:has(.side-menu:checked) {
     padding-bottom: 4%;
 }
 
-.sponsors-row-1, .sponsors-row-2
+
+.sponsors-row-1
 {
     display: flex;
     flex-direction: row;
+    width: 80%;
     align-items: center;
     justify-content: center;
     gap: 7%;
 }
 
-.sponsors-row-1
+.sponsors-row-1 a
 {
-    width: 80%;
+    width: 15%;
+  
+}
+
+.sponsors-row-1 a img
+{
+    width: 100%;
+    filter: grayscale(100);
+}
+
+.sponsors-row-2 a
+{
+    width: 15%;
+}
+
+.sponsors-row-2 a img
+{
+    width: 100%;
+    filter: grayscale(100);
 }
 
 .sponsors-row-2
 {
-    gap: 8%;
-    margin: auto 0;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    gap: 7%;
 }
 
-.sponsors img
-{
-    width: 15%;
-    filter: grayscale(100%);
-}
+
 
 .contato-footer
 {
@@ -538,12 +565,12 @@ body:has(.side-menu:checked) {
     width: 31px;
 }
 
-.cursor {
+#cursor {
     display: inline-block;
     background-color: white;
     width: 0.25rem;
     height: 1.3rem;
-
+    z-index: -2;
     animation: blink 1s infinite;
 }
 
@@ -556,3 +583,8 @@ body:has(.side-menu:checked) {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .sponsors {
+      display: none;
+    }
+  }
