@@ -21,9 +21,28 @@
       <script>
         var on = true
         function hideCursor() { 
-          console.log(on);
-          if(on == true) {document.getElementById('cursor').style.display = "none"; on = false;}
-          else {document.getElementById('cursor').style.display = "inline-block";on=true;} 
+          console.log(window.scrollY);
+          if(on == true) 
+          {
+            document.getElementById('cursor').style.display = "none";
+            on = false;
+
+          }
+          else 
+          {
+            document.getElementById('cursor').style.display = "inline-block";
+            on=true;
+
+          } 
+
+          if(window.scrollY > 0)
+          {
+            document.getElementById('nav').style.top = '7%';
+          }
+          else
+          {
+            document.getElementById('nav').style.top = '12%';
+          }
         }
       </script>
     </head>
@@ -46,7 +65,7 @@
           <input onclick= "hideCursor()" class="side-menu" type="checkbox" id="side-menu"/>
           <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
           <!-- Menu -->
-          <nav class="nav">
+          <nav class="nav" id="nav">
               <ul class="menu">
                   <li class="cool-link"><a href="./somos.html">QUEM SOMOS</a></li>
                   <li class="cool-link"><a href="./acreditacoes.html">ACREDITACÕES</a> </li>
@@ -123,7 +142,7 @@
         </div>
 
       
-        <div class="contato-footer">
+        <div class="contato-footer" id="footer">
           <div class="contato">
             <div class="dados" id="dados">
               <div id="fale">Fale Conosco</div>
