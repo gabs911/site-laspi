@@ -17,6 +17,23 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <meta property="creator.productor"
       content="http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/NUMERO">
+        <script>
+        var on = true
+        function hideCursor() { 
+          console.log(window.scrollY);
+
+          if(window.scrollY > 0)
+          {
+            document.getElementById('nav').style.marginTop = '-11%';
+          }
+          else
+          {
+            document.getElementById('nav').style.marginTop = '0%';
+          }
+        }
+      </script>
+    
+    
     </head>
     <body>
         <!--BARRA DO GOVERNO FEDERAL--> 
@@ -34,10 +51,10 @@
           <!-- Logo -->
           <a href="./index.html" class="logo"><img id="logo-icon" src="static/logolaspi1@2x.png" alt=""></a>
           <!-- Hamburger icon -->
-          <input class="side-menu" type="checkbox" id="side-menu"/>
+          <input onclick= "hideCursor()"  class="side-menu" type="checkbox" id="side-menu"/>
           <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
           <!-- Menu -->
-          <nav class="nav">
+          <nav class="nav" id="nav">
               <ul class="menu">
                   <li class="cool-link"><a href="./somos.html">QUEM SOMOS</a></li>
                   <li class="cool-link"><a href="#">ACREDITACÕES</a> </li>
@@ -108,10 +125,12 @@
                 Av. Athos da Silveira Ramos, 149</br>
                 Cidade Universitária da UFRJ, Rio de Janeiro
               </div>
-              <div class="linkedin">
-                <img src="static/linkedin.svg" alt="">
-              LASPI - UFRJ
-              </div>
+              <a href="https://br.linkedin.com/company/laspi-ufrj">
+                <div class="linkedin">
+                  <img src="static/linkedin.svg" alt="">
+                LASPI - UFRJ
+                </div>
+                </a>
               <div class="telefone">
                 <img src="static/phone.svg" alt="">
                 +55 (21) 3938-0204

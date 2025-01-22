@@ -334,7 +334,7 @@ body:has(.side-menu:checked) {
    background-image: url("./world-mapbg@2x.png");
    background-size: cover;
    background-repeat: no-repeat;
-  
+   z-index: 0;
    justify-content: center;
    align-items: center;
    
@@ -366,7 +366,11 @@ body:has(.side-menu:checked) {
     flex-direction: column;
     gap: 30px;
 }
-
+.dados a
+{
+    color: white;
+    font-weight: normal;
+}
 #fale
 {
     font-size: 20px;
